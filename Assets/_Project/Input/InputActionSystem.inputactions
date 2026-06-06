@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "InputActionSystem",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "f2346f3b-689a-4009-aa47-06248d43c798",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "27d81f3d-e5e0-4432-9526-585df21d7e8e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e5b19d27-365e-4fb1-ba2f-7bdd9e543d5e",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f1a8fef-f5bc-40cc-832a-d4847ceefc66",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d8484ec-cf04-4d97-9ced-ab22b348b0e0",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
