@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace GMDClone.Core
@@ -16,8 +17,14 @@ namespace GMDClone.Core
 
                     if (_instance == null)
                     {
-                        GameObject singletonObject = new(typeof(T).ToString());
+                        GameObject singletonObject = new();
                         _instance = singletonObject.AddComponent<T>();
+
+                        //When singleton object is not in the scene, there is creating new game object with this component
+                        //But game object`s name get the name of the component and the namespace, need only the component`s name
+                        //Because there is the regular expressions in order to remove the namespace`s name
+                        string pattern = "(GMDClone.Core\\.?)";
+                        singletonObject.name = Regex.Replace(typeof(T).ToString(), pattern, string.Empty);
                     }
                 }
 

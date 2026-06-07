@@ -51,6 +51,6 @@ namespace GMDClone.Gameplay.Character
 
         //There is using the property "position" from the rigidbody in order for the character`s speed doesn`t depent on gravity
         //If use MovePosition instead of position, gravity will break down (the character won`t be able to fall by gravity
-        private void FixedUpdate() => _rigidbody.position += Vector2.right * _currentSpeed * Time.fixedDeltaTime;
+        private void FixedUpdate() => _rigidbody.position += _currentSpeed * Time.fixedDeltaTime * Vector2.right;
     }
 }

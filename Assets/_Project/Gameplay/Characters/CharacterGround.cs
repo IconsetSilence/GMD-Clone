@@ -15,9 +15,8 @@ namespace GMDClone.Gameplay.Character
         [SerializeField] private Color _gizmosColor = new(1f, 0f, 0f, 0.25f);
 
         private bool _isGameplay;
-        private const float DefaultAngle = 90f;
 
-        public bool IsOnGround => Physics2D.OverlapBox(transform.position, _checkSize, DefaultAngle, _groundMask);
+        public bool IsOnGround => Physics2D.OverlapBox(transform.position, _checkSize, transform.position.z, _groundMask);
 
         private void OnValidate()
         {

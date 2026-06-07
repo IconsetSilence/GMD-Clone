@@ -37,6 +37,8 @@ namespace GMDClone.Gameplay.Character
             }
         }
 
+        public float Value => _gravity;
+
         private void OnValidate() => FlipGravity = _flipGravity;
 
         private void Awake() => _rigidbody = GetComponent<Rigidbody2D>();
