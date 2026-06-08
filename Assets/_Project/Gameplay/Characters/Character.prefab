@@ -142,7 +142,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6535935955534100175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,10 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMDClone.Gameplay.Character.CharacterSpeed
   _speedMode: 1
-  _low: 8
-  _normal: 13.5
-  _medium: 20
-  _high: 32
+  _low: 5
+  _normal: 6.5
+  _medium: 8
+  _high: 11.5
 --- !u!1 &5210236090887297942
 GameObject:
   m_ObjectHideFlags: 0
