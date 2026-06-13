@@ -7,10 +7,12 @@ namespace GMDClone.Gameplay.Character
     [RequireComponent(typeof(Rigidbody2D))]
     public class CubeJump : MonoBehaviour
     {
-        public event Action JumpEvent; 
+        public event Action JumpEvent;
 
+        [Header(InspectorHeader.References)]
         [SerializeField] private CharacterGround _ground;
         [SerializeField] private CharacterGravity _gravity;
+        [Header(InspectorHeader.GameplaySettings)]
         [SerializeField, Min(0)] private float _jumpForce = 1.5f;
 
         private Rigidbody2D _rigidbody;

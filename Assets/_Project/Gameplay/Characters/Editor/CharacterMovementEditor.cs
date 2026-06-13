@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using GMDClone.Core;
 
 namespace GMDClone.Gameplay.Character
 {
@@ -26,7 +27,7 @@ namespace GMDClone.Gameplay.Character
             DrawDefaultInspector();
 
             EditorGUILayout.Space(8);
-            EditorGUILayout.LabelField("Editor Settings", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField(InspectorHeader.EditorSettings, EditorStyles.boldLabel);
 
             _teleportPosition = EditorGUILayout.Vector2Field("Teleport Position", _teleportPosition);
 

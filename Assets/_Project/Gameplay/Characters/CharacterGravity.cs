@@ -1,3 +1,4 @@
+using GMDClone.Core;
 using System;
 using UnityEngine;
 
@@ -8,9 +9,9 @@ namespace GMDClone.Gameplay.Character
     {
         public event Action FlipGravityEvent, NormalGravityEvent;
 
-        [Header("Reference")]
+        [Header(InspectorHeader.References)]
         [SerializeField] private CharacterGround _ground;
-        [Header("Gameplay Settings")]
+        [Header(InspectorHeader.GameplaySettings)]
         [SerializeField, Min(0)] private float _gravity = 10f;
         [SerializeField, Min(0)] private float _maxDistanceDelta = 0.4f; //In order to make the smooth on change the gravity
         [SerializeField] private bool _flipGravity = false;

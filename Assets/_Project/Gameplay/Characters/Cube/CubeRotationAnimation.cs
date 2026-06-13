@@ -2,14 +2,15 @@ using Cysharp.Threading.Tasks;
 using System.Threading;
 using DG.Tweening;
 using UnityEngine;
+using GMDClone.Core;
 
 namespace GMDClone.Gameplay.Character
 {
     public class CubeRotationAnimation : MonoBehaviour
     {
-        [Header("Reference")]
+        [Header(InspectorHeader.References)]
         [SerializeField] private CharacterGround _ground;
-        [Header("Gameplay Settings")]
+        [Header(InspectorHeader.GameplaySettings)]
         [SerializeField] private float _degress = 90f;
         [SerializeField] private float _duration = 2.5f;
         [SerializeField] private AnimationCurve _ease;

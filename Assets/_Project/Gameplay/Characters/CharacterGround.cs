@@ -1,16 +1,17 @@
 using UnityEngine;
+using GMDClone.Core;
 
 namespace GMDClone.Gameplay.Character
 {
     public class CharacterGround : MonoBehaviour
     {
-        [Header("Reference")]
+        [Header(InspectorHeader.References)]
         [SerializeField] private CharacterGravity _gravity;
         [SerializeField] private LayerMask _groundMask;
-        [Header("Gameplay Settings")]
+        [Header(InspectorHeader.GameplaySettings)]
         [SerializeField] private Vector2 _pointOnNormalGravity;
         [SerializeField] private Vector2 _pointOnFlipGravity, _checkSize;
-        [Header("Editor Settings")]
+        [Header(InspectorHeader.EditorSettings)]
         [SerializeField] private bool _showFlipGravity = false;
         [SerializeField] private Color _gizmosColor = new(1f, 0f, 0f, 0.25f);
 

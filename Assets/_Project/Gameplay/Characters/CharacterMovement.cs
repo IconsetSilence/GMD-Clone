@@ -1,3 +1,4 @@
+using GMDClone.Core;
 using GMDClone.ScriptableObjects;
 using System;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace GMDClone.Gameplay.Character
     {
         public event Action<SpeedMode> ChangeSpeedEvent;
 
-        [Header("References")]
+        [Header(InspectorHeader.References)]
         [SerializeField] private SpeedMode _speedMode = SpeedMode.Normal;
         [SerializeField] private CharacterSpeed _characterSpeed;
 
