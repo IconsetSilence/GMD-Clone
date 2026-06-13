@@ -9,6 +9,7 @@ namespace GMDClone.Gameplay.Character
     public class CubeRotationAnimation : MonoBehaviour
     {
         [Header(InspectorHeader.References)]
+        [SerializeField] private Transform _sprite;
         [SerializeField] private CharacterGround _ground;
         [Header(InspectorHeader.GameplaySettings)]
         [SerializeField] private float _degress = 90f;
@@ -16,7 +17,7 @@ namespace GMDClone.Gameplay.Character
         [SerializeField] private AnimationCurve _ease;
 
         private CancellationTokenSource _cancellationTokenSource;
-        private static Quaternion DefaultRotationOnEnable { get; } = Quaternion.identity;
+        private static readonly Quaternion DefaultRotationOnEnable = Quaternion.identity;
 
         private void OnEnable()
         {
@@ -35,7 +36,7 @@ namespace GMDClone.Gameplay.Character
             while (true)
             {
                 await UniTask.WaitWhile(() => _ground.IsOnGround == true, PlayerLoopTiming.Update, _cancellationTokenSource.Token);
-                await transform.DORotate(Vector3.forward * _degress, _duration, RotateMode.LocalAxisAdd).SetEase(_ease).AsyncWaitForCompletion().AsUniTask();
+                await transform.DORotate(_degress * Vector3.back, _duration, RotateMode.LocalAxisAdd).SetEase(_ease).AsyncWaitForCompletion().AsUniTask();
             }
         }
     }

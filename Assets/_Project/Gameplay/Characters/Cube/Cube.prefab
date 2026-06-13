@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2509416818099526152}
   - component: {fileID: 8044122961305178633}
-  - component: {fileID: 7646391913072846207}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -28,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 6.7000003, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 203934030283369052}
@@ -87,50 +86,11 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.15, y: 0.15}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &7646391913072846207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8497690259092945776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 791c9b991a7ffd043a785fbd945d9ec5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GMDClone.Gameplay.Character.CubeRotationAnimation
-  _ground: {fileID: 1953977022485369287}
-  _degress: -90
-  _duration: 0.35
-  _ease:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &6607412866933212035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,6 +102,26 @@ PrefabInstance:
     - target: {fileID: 4005978772831714839, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661178616202285636, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      propertyPath: _showFlipGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661178616202285636, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      propertyPath: _pointOnFlipGravity.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661178616202285636, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      propertyPath: _pointOnNormalGravity.y
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955922783716038269, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      propertyPath: m_Size.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955922783716038269, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      propertyPath: m_Size.y
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 6200294160719976980, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
       propertyPath: m_LocalPosition.x
@@ -183,6 +163,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7495481760442339505, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -193,6 +177,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4005978772831714839, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2877294539666189580}
+    - targetCorrespondingSourceObject: {fileID: 5210236090887297942, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7687547514379496614}
   m_SourcePrefab: {fileID: 100100000, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
 --- !u!114 &73871658732385612 stripped
 MonoBehaviour:
@@ -210,6 +197,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6442040917317724639, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
   m_PrefabInstance: {fileID: 6607412866933212035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1440101709994498069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5210236090887297942, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
+  m_PrefabInstance: {fileID: 6607412866933212035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7687547514379496614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440101709994498069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791c9b991a7ffd043a785fbd945d9ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GMDClone.Gameplay.Character.CubeRotationAnimation
+  _sprite: {fileID: 2509416818099526152}
+  _ground: {fileID: 1953977022485369287}
+  _degress: 90
+  _duration: 0.3
+  _ease:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 1
+      outWeight: 1
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1953977022485369287 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4661178616202285636, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
