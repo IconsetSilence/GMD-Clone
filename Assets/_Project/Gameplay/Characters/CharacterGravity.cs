@@ -11,8 +11,8 @@ namespace GMDClone.Gameplay.Character
         [Header("Reference")]
         [SerializeField] private CharacterGround _ground;
         [Header("Gameplay Settings")]
-        [SerializeField, Min(0)] private float _gravity = 10;
-        [SerializeField] private float _maxDistanceDelta = 0.4f;
+        [SerializeField, Min(0)] private float _gravity = 10f;
+        [SerializeField, Min(0)] private float _maxDistanceDelta = 0.4f; //In order to make the smooth on change the gravity
         [SerializeField] private bool _flipGravity = false;
 
         private Rigidbody2D _rigidbody;
@@ -47,7 +47,7 @@ namespace GMDClone.Gameplay.Character
         {
             //The character begins fall when it isn`t on the ground in order to overload the game
             if (_ground.IsOnGround == false)
-                _rigidbody.linearVelocity = Vector2.MoveTowards(_rigidbody.linearVelocity, _direction * _gravity, _maxDistanceDelta);
+                _rigidbody.linearVelocity = Vector2.MoveTowards(_rigidbody.linearVelocity, _gravity * _direction, _maxDistanceDelta);
         }
     }
 }

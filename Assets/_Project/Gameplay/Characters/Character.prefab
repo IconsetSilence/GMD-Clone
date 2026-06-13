@@ -131,7 +131,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMDClone.Gameplay.Character.CharacterGravity
   _ground: {fileID: 4661178616202285636}
-  _gravity: 10
+  _gravity: 6
   _maxDistanceDelta: 0.4
   _flipGravity: 0
 --- !u!114 &2399049164772738985
@@ -172,10 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GMDClone.Gameplay.Character.CharacterSpeed
   _speedMode: 1
-  _low: 5
-  _normal: 6.5
-  _medium: 8
-  _high: 11.5
+  _characterSpeed: {fileID: 11400000, guid: fb8e1f01cb0f7a14e9a5fbc991959f21, type: 2}
 --- !u!1 &5210236090887297942
 GameObject:
   m_ObjectHideFlags: 0

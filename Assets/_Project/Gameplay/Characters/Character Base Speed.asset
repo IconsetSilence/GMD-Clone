@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1224348e7e0ab7469df8587f3242b01, type: 3}
+  m_Name: Character Base Speed
+  m_EditorClassIdentifier: Assembly-CSharp::GMDClone.ScriptableObjects.CharacterSpeed
+  _low: 3.5
+  _normal: 4.75
+  _medium: 6
+  _high: 7.25

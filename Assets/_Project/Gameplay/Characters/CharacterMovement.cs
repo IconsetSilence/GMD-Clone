@@ -1,3 +1,4 @@
+using GMDClone.ScriptableObjects;
 using System;
 using UnityEngine;
 
@@ -6,12 +7,11 @@ namespace GMDClone.Gameplay.Character
     [RequireComponent(typeof(Rigidbody2D))]
     public class CharacterMovement : MonoBehaviour
     {
-        public event Action<SpeedMode> SetSpeedEvent;
+        public event Action<SpeedMode> ChangeSpeedEvent;
 
+        [Header("References")]
         [SerializeField] private SpeedMode _speedMode = SpeedMode.Normal;
-        [Header("Speed")]
-        [SerializeField, Min(0)] private float _low;
-        [SerializeField, Min(0)] private float _normal, _medium, _high;
+        [SerializeField] private CharacterSpeed _characterSpeed;
 
         private Rigidbody2D _rigidbody;
         private SpeedMode _currentSpeedMode = SpeedMode.Normal;
@@ -26,27 +26,18 @@ namespace GMDClone.Gameplay.Character
                 _currentSpeedMode = value;
 
                 //There is setting the speed and not setting in method Update
-                _currentSpeed = value switch
-                {
-                    SpeedMode.Low => _low,
-                    SpeedMode.Normal => _normal,
-                    SpeedMode.Medium => _medium,
-                    SpeedMode.High => _high,
-                    _ => default
-                };
+                _currentSpeed = _characterSpeed.GetSpeed(value);
 
-                SetSpeedEvent?.Invoke(value);
+                ChangeSpeedEvent?.Invoke(value);
             }
         }
-
-        public enum SpeedMode { Low, Normal, Medium, High }
 
         private void OnValidate() => Speed = _speedMode;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            _currentSpeed = _normal;
+            _currentSpeed = _characterSpeed.GetSpeed(SpeedMode.Normal);
         }
 
         //There is using the property "position" from the rigidbody in order for the character`s speed doesn`t depent on gravity

@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6200294160719976980, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6200294160719976980, guid: 77a15ef2fccc3fc4199cc8bd94f19138, type: 3}
       propertyPath: m_LocalPosition.y
@@ -240,4 +240,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GMDClone.Gameplay.Character.CubeJump
   _ground: {fileID: 1953977022485369287}
   _gravity: {fileID: 73871658732385612}
-  _jumpForce: 5.5
+  _jumpForce: 7
